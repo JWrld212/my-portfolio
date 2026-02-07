@@ -17,7 +17,7 @@ const Projects = () => {
           <span className="w-full h-[2px] bg-[#1a1443]"></span>
         </div>
       </div>
-      <div className="flex flex-col gap-10 items-center container max-sm:mt-10 md:mt-16 mx-auto py-20 px-4 sm:px-8   from-purple-800 to-purple-900">
+      <div className="flex flex-col gap-10 items-center container max-sm:mt-10 md:mt-16 mx-auto py-20 px-4 sm:px-8">
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold text-white dark:text-gray-100">
             Projects Showcase
