@@ -13,28 +13,31 @@ import {
 import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => (
-  <footer className="bg-gradient-to-r from-purple-900 to-[#0D1224] text-gray-200">
-    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <Link href="/">
+  <footer className="bg-[#050505] border-t border-white/5 text-gray-200">
+    <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
+        <div className="flex flex-col gap-6">
+          <Link href="/" className="w-fit">
             <Image
               src="/logo.png"
               alt="Abdul Basit Logo"
-              width={120}
-              height={120}
+              width={100}
+              height={100}
+              className="brightness-125"
             />
           </Link>
-          <p className="mt-4 text-gray-400">
-            Full Stack Developer passionate about crafting beautiful and
-            performant web applications.
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            Professional Full Stack Developer dedicated to crafting immersive,
+            high-performance digital experiences with cutting-edge technology.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
+          <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-6 opacity-50">
+            Navigation
+          </h3>
+          <ul className="space-y-4">
             {[
               { label: "About", to: "about" },
               { label: "Experience", to: "experience" },
@@ -47,7 +50,7 @@ const Footer = () => (
                   to={item.to}
                   smooth
                   duration={500}
-                  className="cursor-pointer hover:text-pink-500 transition-colors"
+                  className="text-gray-400 hover:text-red-500 transition-all cursor-pointer font-medium"
                 >
                   {item.label}
                 </ScrollLink>
@@ -57,62 +60,69 @@ const Footer = () => (
         </div>
 
         {/* Contact & Social */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Contact</h3>
-          <p>
-            <a
-              href={`mailto:${personalData.email}`}
-              className="hover:text-pink-500 transition-colors"
+        <div className="flex flex-col gap-6">
+          <div>
+            <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-6 opacity-50">
+              Connect
+            </h3>
+            <div className="flex flex-col gap-3">
+              <a
+                href={`mailto:${personalData.email}`}
+                className="text-gray-400 hover:text-red-500 transition-all font-medium"
+              >
+                {personalData.email}
+              </a>
+              <a
+                href={`tel:${personalData.phone}`}
+                className="text-gray-400 hover:text-red-500 transition-all font-medium"
+              >
+                {personalData.phone}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex space-x-4">
+            <Link
+              href={personalData.github}
+              target="_blank"
+              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
             >
-              {personalData.email}
-            </a>
-          </p>
-          <p className="mt-1">
-            <a
-              href={`tel:${personalData.phone}`}
-              className="hover:text-pink-500 transition-colors"
+              <FaGithub size={20} />
+            </Link>
+            <Link
+              href={personalData.linkedIn}
+              target="_blank"
+              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
             >
-              {personalData.phone}
-            </a>
-          </p>
-          <div className="mt-4 flex space-x-4">
-            <Link href={personalData.github} target="_blank">
-              <FaGithub
-                size={24}
-                className="hover:text-pink-500 transition-colors"
-              />
+              <FaLinkedin size={20} />
             </Link>
-            <Link href={personalData.linkedIn} target="_blank">
-              <FaLinkedin
-                size={24}
-                className="hover:text-pink-500 transition-colors"
-              />
+            <Link
+              href={personalData.twitter}
+              target="_blank"
+              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+            >
+              <FaTwitter size={20} />
             </Link>
-            <Link href={personalData.twitter} target="_blank">
-              <FaTwitter
-                size={24}
-                className="hover:text-pink-500 transition-colors"
-              />
-            </Link>
-            <Link href={personalData.Instagram} target="_blank">
-              <FaInstagram
-                size={24}
-                className="hover:text-pink-500 transition-colors"
-              />
-            </Link>
-            <Link href={personalData.facebook} target="_blank">
-              <FaFacebook
-                size={24}
-                className="hover:text-pink-500 transition-colors"
-              />
+            <Link
+              href={personalData.Instagram}
+              target="_blank"
+              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+            >
+              <FaInstagram size={20} />
             </Link>
           </div>
         </div>
       </div>
 
       {/* Divider & Copyright */}
-      <div className="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500 text-base">
-        &copy; {new Date().getFullYear()} Abdul Basit. All rights reserved.
+      <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+        <p>
+          &copy; {new Date().getFullYear()} Abdul Basit. All rights reserved.
+        </p>
+        <p className="flex items-center gap-2">
+          Made with <span className="text-red-600 animate-pulse">❤️</span> in
+          Pakistan
+        </p>
       </div>
     </div>
   </footer>

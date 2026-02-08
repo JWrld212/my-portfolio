@@ -91,12 +91,12 @@ const ContactWithoutCaptcha = () => {
         <div className="flex flex-col gap-6">
           {/* Name Field */}
           <div className="flex flex-col gap-2 group/input">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-[#16f2b3] transition-colors">
+            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-red-500 transition-colors">
               <User className="w-4 h-4" />
               Your Name
             </label>
             <input
-              className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-[#16f2b3]/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600"
+              className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-red-500/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600"
               type="text"
               placeholder="John Doe"
               maxLength={100}
@@ -109,12 +109,12 @@ const ContactWithoutCaptcha = () => {
 
           {/* Email Field */}
           <div className="flex flex-col gap-2 group/input">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-[#16f2b3] transition-colors">
+            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-red-500 transition-colors">
               <Mail className="w-4 h-4" />
               Your Email
             </label>
             <input
-              className={`bg-white/5 w-full border rounded-2xl focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 ${error.email ? "border-red-500/50" : "border-white/10 focus:border-[#16f2b3]/50"}`}
+              className={`bg-white/5 w-full border rounded-2xl focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 ${error.email ? "border-red-500/50" : "border-white/10 focus:border-red-500/50"}`}
               type="email"
               placeholder="john@example.com"
               maxLength={100}
@@ -127,7 +127,7 @@ const ContactWithoutCaptcha = () => {
               }}
             />
             {error.email && (
-              <p className="text-xs text-red-400 ml-1">
+              <p className="text-xs text-red-500 ml-1">
                 Please provide a valid email address.
               </p>
             )}
@@ -135,12 +135,12 @@ const ContactWithoutCaptcha = () => {
 
           {/* Message Field */}
           <div className="flex flex-col gap-2 group/input">
-            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-[#16f2b3] transition-colors">
+            <label className="text-sm font-bold text-slate-500 uppercase tracking-widest ml-1 flex items-center gap-2 group-focus-within/input:text-red-500 transition-colors">
               <MessageSquare className="w-4 h-4" />
               Your Message
             </label>
             <textarea
-              className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-[#16f2b3]/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 resize-none"
+              className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-red-500/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 resize-none"
               placeholder="Tell me about your project..."
               maxLength={500}
               name="message"
@@ -154,17 +154,17 @@ const ContactWithoutCaptcha = () => {
 
           <div className="flex flex-col gap-4 mt-2">
             {error.required && (
-              <p className="text-sm text-red-400 text-center font-medium">
+              <p className="text-sm text-red-500 text-center font-medium">
                 Oops! Looks like some fields are still empty.
               </p>
             )}
 
             <button
-              className="relative group/btn overflow-hidden rounded-2xl bg-gradient-to-r from-[#16f2b3] to-violet-600 p-[1px] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
+              className="relative group/btn overflow-hidden rounded-2xl bg-gradient-to-r from-red-600 to-red-900 p-[1px] transition-all hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
               onClick={handleSendMail}
               disabled={isLoading}
             >
-              <div className="relative flex items-center justify-center gap-2 bg-[#0d1224] group-hover/btn:bg-transparent transition-all rounded-[15px] px-8 py-4 text-white font-bold uppercase tracking-widest text-sm">
+              <div className="relative flex items-center justify-center gap-2 bg-[#050505] group-hover/btn:bg-transparent transition-all rounded-[15px] px-8 py-4 text-white font-bold uppercase tracking-widest text-sm">
                 {isLoading ? (
                   <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
                 ) : (
@@ -180,7 +180,7 @@ const ContactWithoutCaptcha = () => {
       </div>
 
       {/* Decorative Accent */}
-      <div className="absolute w-1 h-20 bg-gradient-to-b from-[#16f2b3] to-transparent left-0 top-20 rounded-full" />
+      <div className="absolute w-1 h-20 bg-gradient-to-b from-red-600 to-transparent left-0 top-20 rounded-full" />
     </div>
   );
 };

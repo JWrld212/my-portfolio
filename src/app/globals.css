@@ -13,11 +13,16 @@
 }
 
 body {
-  background-color: #0d1224;
+  background-color: #050505;
+  color: #ffffff;
 }
 
 body {
-  background-image: url("/svg/common/hero.svg");
+  background-image: radial-gradient(
+    circle at 50% -20%,
+    #450a0a 0%,
+    #050505 80%
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -124,7 +129,7 @@ body {
 }
 .name {
   transition: all 0.3s ease;
-  text-shadow: 0 0 5px rgba(236, 72, 153, 0.5);
+  text-shadow: 0 0 5px rgba(239, 68, 68, 0.5);
 }
 
 .custom-animated-button {
@@ -193,25 +198,11 @@ body {
   }
 }
 
-.btn-blue {
-  --btn-border: rgb(61, 106, 255);
-  --btn-bg-hover: rgb(61, 106, 255);
-  --btn-shadow: rgba(0, 142, 236, 0.815);
+.btn-emerald {
+  --btn-border: #dc2626;
+  --btn-bg-hover: #ef4444;
+  --btn-shadow: rgba(239, 68, 68, 0.5);
   --btn-glow: #fff;
-}
-
-.btn-pink {
-  --btn-border: rgb(236, 72, 153);
-  --btn-bg-hover: rgb(236, 72, 153);
-  --btn-shadow: rgba(236, 72, 153, 0.7);
-  --btn-glow: #ffeaf3;
-}
-.btn-indigo {
-  /* Tailwind’s indigo-500 = #6366f1 (RGB 99,102,241) */
-  --btn-border: rgb(99, 102, 241);
-  --btn-bg-hover: rgb(99, 102, 241);
-  --btn-shadow: rgba(99, 102, 241, 0.7);
-  --btn-glow: #e8eaff; /* a very pale indigo glow */
 }
 .description {
   text-align: justify !important;

@@ -105,20 +105,24 @@ const HeroSection = () => {
       ref={containerRef}
       className="relative min-h-[90vh] flex flex-col items-center justify-center py-12 lg:py-24 overflow-hidden"
     >
+      {/* Background Ambient Glows */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-red-600/10 blur-[120px] rounded-full animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-red-900/10 blur-[150px] rounded-full animate-pulse delay-700" />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center px-4 md:px-8 relative z-10 w-full max-w-7xl mx-auto">
         {/* Left Side: Content */}
         <div className="order-2 lg:order-1 flex flex-col items-start gap-8">
           <div className="flex flex-col gap-4">
-            <span className="hero-tag px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-pink-400 text-sm font-semibold tracking-wider w-fit">
+            <span className="hero-tag px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold tracking-[0.3em] w-fit">
               WELCOME TO MY UNIVERSE
             </span>
             <h1 className="hero-heading text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1]">
               Crafting{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
                 Digital
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-950">
                 Masterpieces
               </span>
             </h1>
@@ -127,7 +131,7 @@ const HeroSection = () => {
               <span className="text-white font-bold">{personalData.name}</span>,
               a professional
               <span
-                className="text-[#16f2b3] ml-2 font-bold inline-block min-w-[200px]"
+                className="text-red-500 ml-2 font-bold inline-block min-w-[200px]"
                 ref={designationRef}
               >
                 {personalData.designation}
@@ -138,143 +142,146 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="hero-cta flex flex-wrap gap-5">
+          <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <Link
                 href={personalData.github}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-pink-500 hover:border-pink-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
               >
                 <BsGithub size={24} />
               </Link>
               <Link
                 href={personalData.linkedIn}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-pink-500 hover:border-pink-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
               >
                 <BsLinkedin size={24} />
               </Link>
               <Link
                 href={personalData.leetcode}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-pink-500 hover:border-pink-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
               >
                 <SiLeetcode size={24} />
               </Link>
               <Link
                 href={personalData.twitter}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-pink-500 hover:border-pink-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
               >
                 <FaTwitterSquare size={24} />
               </Link>
             </div>
-          </div>
 
-          <div className="hero-cta flex flex-wrap gap-4 mt-4">
-            <Link href="#contact" className="group">
-              <button className="px-8 py-4 bg-gradient-to-r from-pink-600 to-violet-600 text-white font-bold rounded-2xl flex items-center gap-2 hover:scale-105 transition-all shadow-lg shadow-pink-500/20 active:scale-95">
-                Let's Collaborate
-                <RiContactsFill className="group-hover:rotate-12 transition-transform" />
-              </button>
-            </Link>
-            <Link href={personalData.resume} target="_blank" className="group">
-              <button className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold rounded-2xl flex items-center gap-2 hover:bg-white/10 transition-all hover:border-white/20 active:scale-95">
-                Download CV
-                <MdDownload className="group-hover:-translate-y-1 transition-transform" />
-              </button>
-            </Link>
+            <div className="hero-cta flex flex-wrap gap-4">
+              <Link
+                href="/#contact"
+                className="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-red-900 text-white font-bold uppercase tracking-wider overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(239,68,68,0.3)]"
+              >
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                <span className="relative flex items-center gap-2">
+                  Let's Collaborate <RiContactsFill />
+                </span>
+              </Link>
+
+              <Link
+                href={personalData.resume}
+                target="_blank"
+                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+              >
+                Get Resume{" "}
+                <MdDownload className="group-hover:translate-y-1 transition-transform" />
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Right Side: Code Block */}
-        <div ref={codeCardRef} className="order-1 lg:order-2">
+        {/* Right Side: Animated Code Card */}
+        <div className="order-1 lg:order-2 flex justify-center">
           <Tilt
             perspective={1000}
             glareEnable={true}
-            glareMaxOpacity={0.15}
+            glareMaxOpacity={0.1}
             scale={1.02}
-            className="rounded-3xl overflow-hidden"
+            className="w-full max-w-[550px]"
           >
-            <div className="relative p-[2px] bg-gradient-to-br from-white/20 via-transparent to-pink-500/20 rounded-3xl">
-              <div className="relative bg-[#0d1224]/90 backdrop-blur-2xl rounded-[22px] overflow-hidden border border-white/5 shadow-2xl">
-                {/* Header Decoration */}
-                <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-                    <div className="w-3 h-3 rounded-full bg-[#febc2e]" />
-                    <div className="w-3 h-3 rounded-full bg-[#28c840]" />
-                  </div>
-                  <div className="text-[10px] font-mono text-slate-500 tracking-widest uppercase">
-                    Portfolio.ts
-                  </div>
+            <div
+              ref={codeCardRef}
+              className="relative rounded-3xl border border-white/10 bg-[#050505]/80 backdrop-blur-xl overflow-hidden shadow-2xl group"
+            >
+              {/* Card Header */}
+              <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/5">
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-red-400/50" />
+                  <div className="w-3 h-3 rounded-full bg-red-300/20" />
                 </div>
+                <div className="text-xs font-mono text-slate-500 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  Portfolio.ts
+                </div>
+              </div>
 
-                <div className="p-6 lg:p-10">
-                  <code className="font-mono text-xs md:text-sm lg:text-base leading-relaxed">
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">01</span>
-                      <p>
-                        <span className="text-pink-500">const</span>{" "}
-                        <span className="text-white">developer</span> = {"{"}
-                      </p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">02</span>
-                      <p className="ml-4">
-                        <span className="text-slate-200">name:</span>{" "}
-                        <span className="text-amber-300">'Abdul Basit'</span>,
-                      </p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">03</span>
-                      <p className="ml-4">
-                        <span className="text-slate-200">focus:</span>{" "}
-                        <span className="text-amber-300">
-                          'Fullstack Mastery'
-                        </span>
-                        ,
-                      </p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">04</span>
-                      <p className="ml-4">
-                        <span className="text-slate-200">skills:</span> [
-                        <span className="text-amber-300">
-                          'NextJS', 'GSAP', 'AI'
-                        </span>
-                        ],
-                      </p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">05</span>
-                      <p className="ml-4">
-                        <span className="text-slate-200">passionate:</span>{" "}
-                        <span className="text-orange-400">true</span>,
-                      </p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">06</span>
-                      <p className="ml-4">
-                        <span className="text-slate-200">motto:</span>{" "}
-                        <span className="text-blue-400">
-                          "Build with Purpose"
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex gap-4">
-                      <span className="text-slate-600 italic">07</span>
-                      <p>{"};"}</p>
-                    </div>
-                    <div className="flex gap-4 mt-4">
-                      <span className="text-slate-600 italic">08</span>
-                      <p>
-                        <span className="text-violet-500">developer</span>.
-                        <span className="text-blue-400">showcase</span>();
-                      </p>
-                    </div>
-                  </code>
-                </div>
+              <div className="p-6 lg:p-10">
+                <code className="font-mono text-xs md:text-sm lg:text-base leading-relaxed">
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">01</span>
+                    <p>
+                      <span className="text-red-500">const</span>{" "}
+                      <span className="text-white">developer</span> = {"{"}
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">02</span>
+                    <p className="ml-4">
+                      <span className="text-slate-200">name:</span>{" "}
+                      <span className="text-red-300">'Abdul Basit'</span>,
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">03</span>
+                    <p className="ml-4">
+                      <span className="text-slate-200">focus:</span>{" "}
+                      <span className="text-red-300">'Fullstack Mastery'</span>,
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">04</span>
+                    <p className="ml-4">
+                      <span className="text-slate-200">skills:</span> [
+                      <span className="text-red-300">
+                        'NextJS', 'GSAP', 'AI'
+                      </span>
+                      ],
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">05</span>
+                    <p className="ml-4">
+                      <span className="text-slate-200">passionate:</span>{" "}
+                      <span className="text-red-600">true</span>,
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">06</span>
+                    <p className="ml-4">
+                      <span className="text-slate-200">motto:</span>{" "}
+                      <span className="text-red-400">"Build with Purpose"</span>
+                    </p>
+                  </div>
+                  <div className="flex gap-4">
+                    <span className="text-slate-600 italic">07</span>
+                    <p>{"};"}</p>
+                  </div>
+                  <div className="flex gap-4 mt-4">
+                    <span className="text-slate-600 italic">08</span>
+                    <p>
+                      <span className="text-red-500">developer</span>.
+                      <span className="text-white">showcase</span>();
+                    </p>
+                  </div>
+                </code>
               </div>
             </div>
           </Tilt>

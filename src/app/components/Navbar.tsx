@@ -47,13 +47,13 @@ const Navbar = () => {
           smooth={true}
           offset={-80}
           duration={500}
-          activeClass="text-pink-500 !font-bold"
+          activeClass="text-red-500 !font-bold"
           className={`${baseClasses} text-slate-300 hover:text-white`}
           onClick={isMobile ? () => setIsMenuOpen(false) : undefined}
         >
           {item.label}
           {!isMobile && (
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-300 group-hover:w-full [.text-pink-500_&]:w-full" />
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-900 transition-all duration-300 group-hover:w-full [.text-red-500_&]:w-full" />
           )}
         </ScrollLink>
       );
@@ -68,7 +68,7 @@ const Navbar = () => {
       >
         {item.label}
         {!isMobile && (
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-violet-600 transition-all duration-300 group-hover:w-full" />
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-900 transition-all duration-300 group-hover:w-full" />
         )}
       </Link>
     );
@@ -78,7 +78,7 @@ const Navbar = () => {
     <nav
       className={`sticky top-0 z-[9999] transition-all duration-500 ${
         isScrolled
-          ? "bg-[#0d1224]/80 backdrop-blur-xl border-b border-white/10 py-2"
+          ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/10 py-2"
           : "bg-transparent py-4"
       }`}
     >
@@ -143,7 +143,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-[#0d1224]/95 backdrop-blur-2xl border-b border-white/10 md:hidden animate-in slide-in-from-top duration-300">
+        <div className="absolute top-full left-0 w-full bg-[#050505]/95 backdrop-blur-2xl border-b border-white/10 md:hidden animate-in slide-in-from-top duration-300">
           <div className="container mx-auto px-6 py-8 flex flex-col space-y-2">
             {navItems.map((item) => renderLink(item, true))}
           </div>
