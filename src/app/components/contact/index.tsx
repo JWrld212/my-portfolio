@@ -155,11 +155,6 @@ function ContactSection() {
                       icon: FaStackOverflow,
                       color: "#f48024",
                     },
-                    {
-                      href: personalData.facebook,
-                      icon: FaFacebook,
-                      color: "#1877f2",
-                    },
                   ].map((social, idx) => (
                     <Link
                       key={idx}

@@ -5,7 +5,14 @@ import Link from "next/link";
 import ProjectCard from "./project-card";
 
 const Projects = () => {
-  const displayedProjects = projectsData.slice(0, 3);
+  const displayedProjects = [...projectsData]
+    .sort((a, b) => {
+      const ad = a.date ? new Date(a.date).getTime() : 0;
+      const bd = b.date ? new Date(b.date).getTime() : 0;
+      return bd - ad; 
+    })
+    .slice(0, 3);
+
   return (
     <section
       id="projects"

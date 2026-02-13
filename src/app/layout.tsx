@@ -16,30 +16,33 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Abdul Basit | Full Stack Developer & AI Automation Expert",
+  title: "Abdul Wajud | Full Stack Developer & AI Automation Expert",
   description:
-    "Explore the portfolio of Abdul Basit, a Professional Full Stack Developer specializing in Next.js, AI Automation, and modern web solutions. Built for performance and user experience.",
+    "Explore the portfolio of Abdul Wajud, a Professional Full Stack Developer specializing in Next.js, AI Automation, and modern web solutions. Built for performance and user experience.",
   keywords: [
-    "Abdul Basit",
+    "Abdul Wajud",
     "Full Stack Developer",
     "Next.js Portfolio",
     "AI Automation",
     "Software Engineer",
     "React Developer",
   ],
-  authors: [{ name: "Abdul Basit" }],
+  authors: [{ name: "Abdul Wajud" }],
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
-    title: "Abdul Basit | Personal Portfolio",
+    title: "Abdul Wajud | Personal Portfolio",
     description:
       "Full Stack Developer & AI Automation Expert — Building the future of the web.",
-    url: "https://abdulbasit-005.vercel.app",
-    siteName: "Abdul Basit Portfolio",
+    url: "https://abdulwajud-005.vercel.app",
+    siteName: "Abdul Wajud Portfolio",
     images: [
       {
         url: "/Website-overview.png",
         width: 1200,
         height: 630,
-        alt: "Abdul Basit Portfolio Overview",
+        alt: "Abdul Wajud Portfolio Overview",
       },
     ],
     locale: "en_US",
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdul Basit | Full Stack Developer",
+    title: "Abdul Wajud | Full Stack Developer",
     description: "Building modern web applications and AI automations.",
     images: ["/Website-overview.png"],
   },

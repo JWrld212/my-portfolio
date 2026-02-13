@@ -1,8 +1,8 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor's in Information Technology'",
-    duration: "2020 - Present",
-    institution: "University of Chakwal",
+    title: "Bachelor's in Management sciences",
+    duration: "2021 - 2024",
+    institution: "Africa University of Benin Republic",
   },
 ];

@@ -50,6 +50,13 @@ const ContactWithoutCaptcha = () => {
 
     try {
       setIsLoading(true);
+      console.log({
+        serviceID,
+        templateID,
+        publicKey: options.publicKey,
+        templateParams,
+      });
+
       const res = await emailjs.send(
         serviceID,
         templateID,
