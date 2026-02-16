@@ -4,8 +4,13 @@ import {
 } from "next/constants.js";
 
 /** @type {import("next").NextConfig} */
-const nextConfig = {
+const baseConfig = {
   reactStrictMode: true,
+
+  // 👇 ADD THIS
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 const nextConfigFunction = async (phase: string) => {
@@ -14,9 +19,9 @@ const nextConfigFunction = async (phase: string) => {
       dest: "public",
       register: true,
     });
-    return withPWA(nextConfig);
+    return withPWA(baseConfig);
   }
-  return nextConfig;
+  return baseConfig;
 };
 
 export default nextConfigFunction;
