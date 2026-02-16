@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky",
+    "prepare": "node ./scripts/prepare-husky.js",
     "format": "prettier --write ."
   },
   "dependencies": {
