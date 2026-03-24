@@ -20,7 +20,7 @@ export const projectsData = [
   demo: "https://chain-assist.com",
   date: "2026-03-20",
   images: [
-    "/projects/docs-now/chain-assist.png",
+    "/projects/docs-now/Chain-assist.png",
   ],
   videos: [""],
   highlights: [
