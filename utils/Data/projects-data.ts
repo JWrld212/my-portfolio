@@ -37,8 +37,60 @@ export const projectsData = [
     "Database schema design for secure wallet data storage"
   ],
 },
-  {
+{
     id: 2,
+    name: "View Price",
+    description:
+      "View Price is a modern, role-based e-commerce web application built with React, Node.js, MongoDB, and Paystack integration. The platform allows users to browse premium wristwatches, securely place orders, and manage their cart, while providing administrators with a real-time inventory management dashboard and user management features.",
+    tools: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT Authentication",
+      "Cloudinary",
+      "Bcryptjs",
+      "Paystack",
+      "Nodemailer",
+    ],
+    role: "Full-stack Developer",
+    code: "", // Add your GitHub repo when available
+    demo: "https://www.viewpricestore.live",
+    date: "2025-10-14",
+    images: [
+      "/projects/docs-now/view-price.png",
+      
+    ],
+    videos: [],
+    highlights: [
+      "Email & password authentication with JWT tokens",
+      "Admin signup with secret code verification",
+      "Role-based access control (Admin vs User routes)",
+      "Product management with Cloudinary image uploads",
+      "Shopping cart with context-based state management",
+      "Order management system with status tracking",
+      "Admin dashboard for real-time inventory management",
+      "Password hashing with bcryptjs for security",
+      "Protected API routes with authAdmin middleware",
+      "Toast notifications for user feedback",
+      "Responsive design with Tailwind CSS",
+    ],
+    challenges: [
+      "Implementing secure role-based authentication with JWT",
+      "Admin secret code verification during signup",
+      "Managing cart state across multiple pages with Context API",
+      "Protecting admin routes with middleware validation",
+      "Cloudinary image upload integration and optimization",
+      "Order data persistence and status management",
+      "Token expiration handling and refresh logic",
+      "Preventing unauthorized admin access to dashboard",
+    ],
+  },
+
+  {
+    id: 3,
     name: "JWRLD Watches",
     description:
       "JWRLD Watches is a modern, role-based e-commerce web application built with Vanilla JavaScript, Firebase Authentication, Firestore, and Paystack integration. The platform allows users to browse premium wristwatches, securely place orders, and track deliveries, while providing administrators with a real-time inventory management dashboard.",
