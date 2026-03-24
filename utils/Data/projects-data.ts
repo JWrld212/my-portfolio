@@ -41,7 +41,7 @@ export const projectsData = [
     id: 2,
     name: "View Price",
     description:
-      "View Price is a modern, role-based e-commerce web application built with React, Node.js, MongoDB, and Paystack integration. The platform allows users to browse premium wristwatches, securely place orders, and manage their cart, while providing administrators with a real-time inventory management dashboard and user management features.",
+      "View Price is a modern, role-based e-commerce web application built with React, Node.js, MongoDB, and Paystack integration. The platform allows users to browse premium goods, securely place orders, and manage their cart, while providing administrators with a real-time inventory management dashboard and user management features.",
     tools: [
       "React",
       "Vite",
